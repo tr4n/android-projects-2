@@ -7,64 +7,69 @@
     android:background="#F5F2F2"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/iv_photo">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CODE"
+            android:textColor="#ff00"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_student_code"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:ems="10"
+            android:hint=""
+            android:imeOptions="actionSearch"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#ff00"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_search_black_24dp"
+
+            tools:ignore="VectorDrawableCompat" />
+
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/iv_photo"
-        android:elevation="8dp"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_width="240dp"
+        android:layout_height="320dp"
         android:layout_marginTop="32dp"
+        android:elevation="8dp"
+        android:src="@drawable/student"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et_student_code"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint=""
-        android:imeOptions="actionSearch"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="#000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_photo" />
-
-    <ImageView
-        android:id="@+id/iv_search"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/et_student_code"
-        app:layout_constraintTop_toBottomOf="@+id/iv_photo"
-        app:srcCompat="@drawable/ic_search_black_24dp"
-        tools:ignore="VectorDrawableCompat" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="CODE"
-        android:textColor="#000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/et_student_code"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_photo" />
 
     <ImageView
         android:id="@+id/iv_history"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_student_code"
-        app:srcCompat="@drawable/ic_history_black_24dp" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/ic_history_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
 </android.support.constraint.ConstraintLayout>
