@@ -1,4 +1,4 @@
-package com.example.pixabayapi;
+package com.example.pixabayapi.networks;
 
 public class PixabayRequest {
     private String key;
@@ -33,5 +33,16 @@ public class PixabayRequest {
 
     public int getPerPage() {
         return perPage;
+    }
+
+    @Override
+    public String toString() {
+        return "PixabayRequest{" +
+                "key='" + key + '\'' +
+                ", q='" + q + '\'' +
+                ", imageType='" + imageType + '\'' +
+                ", page=" + page +
+                ", perPage=" + perPage +
+                '}';
     }
 }

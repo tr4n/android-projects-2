@@ -1,4 +1,4 @@
-package com.example.pixabayapi;
+package com.example.pixabayapi.models;
 
 public class PhotoModel {
     private String url;
@@ -43,5 +43,15 @@ public class PhotoModel {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "PhotoModel{" +
+                "url='" + url + '\'' +
+                ", largeUrl='" + largeUrl + '\'' +
+                ", width=" + width +
+                ", height=" + height +
+                '}';
     }
 }
