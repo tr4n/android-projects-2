@@ -5,6 +5,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -50,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rvPhotos;
     List<PhotoModel> photoModelList = new ArrayList<>();
     private static final String TAG = "MainActivity";
+    PixabayRequest pixabayRequest  = new PixabayRequest("girl", 1);
     GridLayoutManager girdLayoutManager = new GridLayoutManager(this,2);
+    StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
     PhotoAdapter photoAdapter ;
 
     @Override
@@ -71,13 +74,15 @@ public class MainActivity extends AppCompatActivity {
                 // Toast.makeText(MainActivity.this, "No results", Toast.LENGTH_SHORT).show();
                 //     Log.d(TAG, "onViewClicked: " + etSearch.getText().toString());
                 if (etSearch.getText().toString().length() == 0) break;
-                PixabayRequest pixabayRequest = new PixabayRequest(etSearch.getText().toString(), 1);
+                 pixabayRequest = new PixabayRequest(etSearch.getText().toString(), 1);
                 Log.d(TAG, "request: " + pixabayRequest);
                 loadPhotos(pixabayRequest);
                 break;
             case R.id.iv_right:
+                loadPhotos(new PixabayRequest(pixabayRequest.getQ(), pixabayRequest.getPage() +1));
                 break;
             case R.id.iv_left:
+                loadPhotos(new PixabayRequest(pixabayRequest.getQ(), pixabayRequest.getPage() -1));
                 break;
         }
     }
@@ -92,11 +97,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void loadPhotos(PixabayRequest pixabayRequest) {
+    private void loadPhotos(PixabayRequest request) {
         //   Log.d(TAG, "loadPhotos: loadphoto");
+        if(request.getPage() < 1) return;
+        pixabayRequest = request;
+        tvPageNumber.setText(request.getPage()+"");
         RetrofitInstance.getInstance()
                 .create(iPixabayService.class)
-                .get(pixabayRequest.getKey(), pixabayRequest.getQ(), pixabayRequest.getImageType(), pixabayRequest.getPage(), pixabayRequest.getPerPage())
+                .get(request.getKey(), request.getQ(), request.getImageType(), request.getPage(), request.getPerPage())
                 .enqueue(new Callback<PixabayResponse>() {
                     @Override
                     public void onResponse(Call<PixabayResponse> call, Response<PixabayResponse> response) {
@@ -120,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         Log.d(TAG, "onResponse: " + photoModelList);
                         photoAdapter = new PhotoAdapter(photoModelList, MainActivity.this);
-                        rvPhotos.setLayoutManager(girdLayoutManager);
+                        rvPhotos.setLayoutManager(staggeredGridLayoutManager);
                         rvPhotos.setAdapter(photoAdapter);
 
                     }

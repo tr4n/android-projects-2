@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/listFriend"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        android:title="List Friend"/>
+    <item android:id="@+id/search"
+        android:title="Search"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_action_search"
+        app:showAsAction="collapseActionView|always" />
+
+</menu>

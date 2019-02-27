@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="30dp"
+
+    android:orientation="vertical"
+    >
+
+<RadioGroup
+    android:paddingRight="90dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <RadioButton
+            android:text="Nam"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:text="Nữ"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:text="Không xác định"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+</RadioGroup>
+    <RelativeLayout
+        android:paddingRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thoát"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="65dp"
+            android:textSize="17dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+    <TextView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:textSize="17dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

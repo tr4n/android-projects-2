@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#346867</color>
+    <color name="colorPrimaryDark">#235150</color>
+    <color name="colorNamTrau">#235150</color>
+    <color name="colortab">#b6b6b6</color>
+    <color name="colorAccent">#235150</color>
+    <color name="textColor">#222222</color>
+    <color name="colorhint">#588787</color>
+
+    <color name="text_Color">#ffffff</color>
+    <color name="textColorButtonDisEnable">#B6B6B6</color>
+    <color name="textColorButtonEnable">#222222</color>
+    <color name="backgroundConnectIntenet">#ff6535</color>
+    <color name="textColor_per">#787878</color>
+    <color name="colorRed">#EA2E49</color>
+
+</resources>

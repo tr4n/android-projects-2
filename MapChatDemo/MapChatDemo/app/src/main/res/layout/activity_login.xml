@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:scrollbars="vertical"
+    tools:context="com.example.buinam.mapchatdemo.activity.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/text_Color"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtuserNameLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_Color"
+                android:hint="Tên đăng nhập"
+                android:maxLines="1"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+            <EditText
+                android:id="@+id/edtpassWordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/text_Color"
+                android:focusableInTouchMode="true"
+                android:hint="Mật khẩu"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="14dp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+            <Button
+                android:id="@+id/btLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_selector"
+                android:enabled="false"
+                android:text="Đăng nhập"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btForgotPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@null"
+                android:text="Quên mật khẩu? Trợ Giúp"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="------------- HOẶC -------------"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="#dcdcdc"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/btLoginGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible" />
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/btLoginFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="1dp"
+                    android:paddingBottom="12sp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="12sp"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btregisterUser"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@null"
+            android:text="Bạn chưa có tài khoản? Đăng Kí Ngay!"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+</ScrollView>

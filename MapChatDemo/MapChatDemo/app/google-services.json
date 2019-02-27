@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "576170356878",
+    "firebase_url": "https://mapchat-144203.firebaseio.com",
+    "project_id": "mapchat-144203",
+    "storage_bucket": "mapchat-144203.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576170356878:android:a792660f63f3d333",
+        "android_client_info": {
+          "package_name": "com.example.buinam.mapchatdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576170356878-4c3eqttc63dn0pljpc8n6tq659heg10m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.buinam.mapchatdemo",
+            "certificate_hash": "20A79071D64349A216382C917B54CA11A453CA39"
+          }
+        },
+        {
+          "client_id": "576170356878-g8gb2lihbh083qjde9f3gjmcb303kh86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzTvXnHA3yC6UHyYzE2UqMdrZLFgKfZPE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576170356878-g8gb2lihbh083qjde9f3gjmcb303kh86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

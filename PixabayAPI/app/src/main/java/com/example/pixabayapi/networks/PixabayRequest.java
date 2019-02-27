@@ -12,7 +12,7 @@ public class PixabayRequest {
         this.page = page;
         this.key = "11705223-2e906401dbe44ed955bacd2ac";
         this.imageType = "photo";
-        this.perPage = 50;
+        this.perPage = 10;
     }
 
     public String getKey() {

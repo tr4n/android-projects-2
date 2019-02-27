@@ -74,10 +74,11 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
                     fixedWidth,
                     fixedHeight
             );
-        //    ivPhotoItem.setLayoutParams(layoutParams);
+            ivPhotoItem.setLayoutParams(layoutParams);
             Picasso.get()
                     .load(photoModel.getUrl())
                     .into(ivPhotoItem);
+            ivPhotoItem.setOnClickListener(this);
 
         }
 

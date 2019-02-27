@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/changeColorGroupChat"
+        android:orderInCategory="103"
+        android:title="Thay đổi màu sắc" />
+    <item
+        android:id="@+id/infoGroupChat"
+        android:orderInCategory="101"
+        android:title="Xem thông tin nhóm" />
+</menu>

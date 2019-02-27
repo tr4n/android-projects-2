@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/info"
+        android:orderInCategory="100"
+        android:title="Xem trang cá nhân" />
+
+    <item
+        android:id="@+id/location"
+        android:orderInCategory="101"
+        android:title="Xem vị trí" />
+</menu>
